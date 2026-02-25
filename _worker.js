@@ -51,9 +51,11 @@ export default {
 		}
 
 		const targetUrl = UPSTREAM_DOH_URL + url.search;
+		const forwardHeaders = new Headers(request.headers);
+		forwardHeaders.set('Host', 'dns.google');
 		const newRequest = new Request(targetUrl, {
 			method: request.method,
-			headers: request.headers,
+			headers: forwardHeaders,
 			body: request.body,
 			redirect: 'follow',
 		});
