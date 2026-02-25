@@ -25,9 +25,9 @@
 
 	/**
 	 * Environment Variables
-	 * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
+	 * 可选 vars.DOH_ROUTE：路由字符串，AdGuard Home 上游填 域名/该值。不设则默认为 "dns-query"
 	 */
-	// "vars": { "MY_VARIABLE": "production_value" },
+	// "vars": { "DOH_ROUTE": "dns-query" },
 	/**
 	 * Note: Use secrets to store sensitive data.
 	 * https://developers.cloudflare.com/workers/configuration/secrets/
